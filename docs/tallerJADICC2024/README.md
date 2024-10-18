@@ -6,6 +6,8 @@
 - Proponer el desarrollo de proyectos de enseñanza de la programación
 - Desarrollar un proyecto simple de ejemplo
 
+-------------------------------------------------------------------------------
+
 ## ¿Qué es p5.js?
 
 1. Una bilioteca (*library*) [Javascript](https://es.javascript.info/) que
@@ -15,6 +17,8 @@
 3. El sitio [p5js.org](https://p5js.org/es/) contiene tutoriales y documentación
    detalladas de su uso con muchos ejemplos de la comunidad
 
+-------------------------------------------------------------------------------
+
 ## ¿Qué necesito para desarrollar aplicaciones?
 
 Existen dos alternativas:
@@ -22,6 +26,8 @@ Existen dos alternativas:
 1. *Offline*: Un editor de programación (texto plano) luego de haber descargado
    `p5.js`. Ver la sección [Descargar](https://p5js.org/es/download/)
 4. Usar el [Editor](https://editor.p5js.org/) en línea. Este servicio es gratuito.
+
+-------------------------------------------------------------------------------
 
 ## ¿Porqué usar p5.js?
 
