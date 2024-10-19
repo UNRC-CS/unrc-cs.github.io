@@ -20,6 +20,8 @@ derecha.
 
 <iframe src="https://editor.p5js.org/"  width="600" height="600"></iframe>
 
+-------------------------------------------------------------------------------
+
 ### Usando el p5.js Web Editor:
 
 1. Ingresar con una cuenta en el editor web. Podemos hacerlo con nuestra cuenta
@@ -30,10 +32,17 @@ derecha.
 
 ![guardar .center](img/save-sketch.gif ':size=60%')
 
+-------------------------------------------------------------------------------
+
 ### El código inicial
 
-Cada vez que creamos un nuevo proyecto, el sistema crea tres archivos:
-`index.html`, `style.css`, y `sketch.js`.
+Cada vez que creamos un nuevo proyecto (o *sketch*), el sistema crea tres
+archivos: `index.html`, `style.css`, y `sketch.js`.
+
+El archivo `index.html` es página web que contiene la interfaz gráfica de la
+aplicación y incluye la hoja de estilos `style.css` y el código Javascript
+`sketch.js`. El archivo `sketch.js` contiene inicialmente dos funciones: `setup()` y
+`draw()`.
 
 ```js
 function setup() {
@@ -45,14 +54,13 @@ function draw() {
 }
 ```
 
-El archivo `sketch.js` contiene inicialmente dos funciones: `setup()` y
-`draw()`. Al iniciarse la aplicación, *p5.js* ejecutará `setup()` se una vez al
-principio. Podemos usar esta función para definir configuraciones o valores
-iniciales de nuestro proyecto, como por ejemplo crear el *canvas* (área de
-dibujo) en la página web.
+Al iniciarse la aplicación, *p5.js* ejecutará `setup()` por única vez al
+comienzo, luego de crear algunos objetos internos. Podemos usar esta función
+para definir configuraciones o valores iniciales de nuestro proyecto, como por
+ejemplo crear el *canvas* (área de dibujo) en la página web.
 
-!> ***Atención***: Todas las funciones de *p5.js* se crean inmediatamente antes
-de ejecutar `setup()`. Intentar usarlas antes generará errores.
+!> ***Atención***: Todas las funciones de *p5.js* estarán disponibles en
+al ejecutarse `setup()`. Intentar usarlas antes generará errores.
 
 El código de *p5.js* invocará a la función `draw()` repetidamente unas 60 veces
 por segundo, permitiéndonos programar animaciones fácilmente.
@@ -76,6 +84,8 @@ function mostrarTexto(texto) {
 }
 ```
 
+-------------------------------------------------------------------------------
+
 ## Nuestra primera animación
 
 Para confirmar que el sistema ejecuta la función `draw()` repetidamente, podemos
@@ -98,6 +108,8 @@ function draw() {
 
 Copiar y pegar el código anterior en el editor de arriba, luego ejecutar el
 programa.
+
+-------------------------------------------------------------------------------
 
 ## Dibujando en el canvas
 
