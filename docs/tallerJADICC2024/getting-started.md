@@ -15,8 +15,8 @@ Debajo está el editor embebido en éste documento, en el cual podemos trabajar
 directamente o ustedes pueden abrirlo en
 [otra ventana de su navegador](https://editor.p5js.org/). Ante la pregunta de
 usar *cookies*, pulsar en el botón `Allow Essential` (permitir sólo lo
-esencial). Pueden seleccionar el idioma español en el menú de arriba a la
-izquierda.
+esencial). Se puede seleccionar el idioma español en el menú de arriba a la
+derecha.
 
 <iframe src="https://editor.p5js.org/"  width="600" height="600"></iframe>
 
@@ -51,11 +51,30 @@ principio. Podemos usar esta función para definir configuraciones o valores
 iniciales de nuestro proyecto, como por ejemplo crear el *canvas* (área de
 dibujo) en la página web.
 
+!> ***Atención***: Todas las funciones de *p5.js* se crean inmediatamente antes
+de ejecutar `setup()`. Intentar usarlas antes generará errores.
+
 El código de *p5.js* invocará a la función `draw()` repetidamente unas 60 veces
 por segundo, permitiéndonos programar animaciones fácilmente.
 
-Si ejecutamos el programa, sólo visualizaremos el canvas con un fondo gris
-suave.
+Si ejecutamos el programa, visualizaremos el canvas con un fondo gris suave.
+
+Si no estamos interesados en hacer una animación, simplemente podemos borrar la
+función `draw()` y hacer todo en `setup()` desde donde podemos invocar a
+nuestras propias funciones definidas como en el siguiente ejemplo:
+
+```js
+function setup() {
+  createCanvas(400, 400);
+  background(220);
+  mostrarTexto("Hola p5.js");
+}
+
+function mostrarTexto(texto) {
+  // muestra el texto desde la coordenada (50,50)
+  text(texto, 50, 50);
+}
+```
 
 ## Nuestra primera animación
 
@@ -63,15 +82,53 @@ Para confirmar que el sistema ejecuta la función `draw()` repetidamente, podemo
 ir cambiando el color de fondo del canvas de la siguiente manera:
 
 ```js
-// color de fondo del canvas
-let fondoCanvas = 255;
+// color de fondo del canvas (negro)
+let fondoCanvas = 0;
 
 function setup() {
   createCanvas(400, 400);
 }
 
+// cambia el fondo con valores [0..255]
 function draw() {
   background(fondoCanvas);
   fondoCanvas = (fondoCanvas + 1) % 256;
 }
 ```
+
+Copiar y pegar el código anterior en el editor de arriba, luego ejecutar el
+programa.
+
+## Dibujando en el canvas
+
+*P5.js* contiene un conjunto de funciones para dibujar figuras en el canvas.
+El siguiente programa dibuja un círculo con fondo rojo y un rectángulo
+verde.
+
+```js
+function setup() {
+  createCanvas(400, 400);
+}
+
+function rojo() {
+  return color(255, 0, 0);
+}
+
+function verde() {
+  return color(0, 255, 0);
+}
+
+function draw() {
+  background(220);
+  // círculo rojo con centro (80,110), diámetro: 50
+  fill(rojo());
+  circle(80, 110, 50);
+
+  // rectángulo verde en (100,120), ancho: 80, alto: 65
+  fill(verde());
+  rect(100, 200, 80, 65);
+}
+```
+
+Para ver el conjunto de funciones y estructuras de datos que contiene *p5.js* ir
+a la sección [Referencia](https://p5js.org/es/reference/).
