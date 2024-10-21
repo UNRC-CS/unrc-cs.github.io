@@ -16,7 +16,8 @@ directamente o ustedes pueden abrirlo en
 [otra ventana de su navegador](https://editor.p5js.org/). Ante la pregunta de
 usar *cookies*, pulsar en el botón `Allow Essential` (permitir sólo lo
 esencial). Se puede seleccionar el idioma español en el menú de arriba a la
-derecha.
+derecha. Para verlo mas grande pueden ocultar la barra de navegación de la
+izquierda haciendo click en el botón <span style="color: green;">&equiv;</span>.
 
 <iframe src="https://editor.p5js.org/"  width="600" height="600"></iframe>
 
@@ -99,7 +100,7 @@ Para confirmar que el sistema ejecuta la función `draw()` repetidamente, podemo
 ir cambiando el color de fondo del canvas de la siguiente manera:
 
 ```js
-// color de fondo del canvas (negro)
+// color de fondo del canvas (inicialmente negro)
 let fondoCanvas = 0;
 
 function setup() {
@@ -148,6 +149,8 @@ function draw() {
   rect(100, 200, 80, 65);
 }
 ```
+
+Copiar y pegar el código anterior en el editor y luego ejecutarlo.
 
 Para ver el conjunto de funciones y estructuras de datos que contiene *p5.js* ir
 a la sección [Referencia](https://p5js.org/es/reference/).

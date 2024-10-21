@@ -11,7 +11,7 @@ En cada ciclo se deben realizar los siguientes pasos:
 4. Dibujar los objetos
 
 Ya vimos que en *p5.js* implementando estos pasos en la función `draw()` es
-suficiente ya que el sistema la ejecuta repetidamente en forma automática.
+suficiente ya que se ejecuta repetidamente.
 
 -------------------------------------------------------------------------------
 
@@ -77,11 +77,17 @@ let circulo = {
 }
 ```
 
-En el [sketch](https://editor.p5js.org/marroyo/sketches/dZyp4-S06) podemos ver
-una primera versión de objetos en movimiento. En `utils.js` podemos ver una
-función para crear círculos.
+Debajo vemos un sketch con una podemos ver una primera versión de objetos en
+movimiento. En `utils.js` podemos ver una función para crear círculos.
 
-Analicémosla!!!
+> Nota: Si sólo ven la ejecución del programa hacer click en el nombre del
+> sketch (*taller-p5-v1*).
+
+Hacer click [aquí](https://editor.p5js.org/marroyo/full/dZyp4-S06) si desean
+abrir el sketch en otra pestaña o ventana del navegador.
+
+<iframe src="https://editor.p5js.org/marroyo/full/dZyp4-S06"
+        width="600" height="600"></iframe>
 
 ## Colisiones simples
 
@@ -89,10 +95,50 @@ Si queremos lograr efectos de rebotes, debemos hacer cambios en la *dirección*
 de la velocidad de los objetos en una colisión.
 
 Agreguemos la lógica para que los círculos reboten en los extremos del canvas.
-Sería bueno que cada objeto tenga una propiedad que determine si debe rebotar en
-los límites del canvas o no.
+Aplicaremos el efecto de rebote a los objetos que tengan la propiedad
+`rebotaEnCanvas`.
 
-Debemos hacer que su dirección se invierta en la función
-`actualizarVelocidad()`.
+En el siguiente sketch incluimos el efecto de rebote en los límites del canvas.
 
-Lo hacemos?
+<iframe src="https://editor.p5js.org/marroyo/full/VQiUttPI5" 
+        width="600" height="600"></iframe>
+
+Se debe notar que se movió el código de cálculo de la posición a una función en
+el archivo `dinamica.js` (script incluido en `index.html`).
+
+En `dinamica.js` la función `actualizarPosición(obj)` invocada desde `draw()`
+ahora invoca a `actualizarVelocidad(obj)` para eventualmente cambiar la
+dirección de la velocidad ante un rebote en los límites del canvas.
+
+Veamos la lógica para determinar si rebotamos en las paredes izquierda o derecha.
+
+1. Rebota en la pared izquierda si la posición $x$ menos el radio es $\leq 0$
+2. Rebota en la pared derecha si la posición $x$ más el radio es $\geq width$,
+   donde `width` es una variable de `p5` con el *ancho del canvas*.
+
+La reacción es muy simple: Invertimos la dirección (componente *x* del vector
+*velocidad*).
+
+Hacemos lo mismo para los rebotes en el techo y piso, usando la posición *y*
+inviertiendo el componente *y* del vector *velocidad*.
+
+## Interacción con el mouse
+
+Si definimos la función `mouseClicked()`, éste se invocará en cada click del
+mouse. El sistema, además, define las variables globales `mouseX` y `mouseY` que
+representan la coordenada *(x,y)* del canvas donde ocurrió el click.
+
+> ***Ejercicio***: Incrementar la velocidad horizontal del círculo cada vez que
+> se hace un click sobre él.
+
+¿Cómo detectar si se hizo click sobre el círculo?
+
+> Un punto $(x,y)$ en el plano está dentro del círculo $c$ con centro $(c_x,
+> c_y)$ y radio $r$, si la *distancia* entre $(x,y)$ y $(c_x, c_y)$ es menor que
+> $r$.
+
+Ya vimos cómo calcular la *distancia entre dos pintos* cuando vimos el cálculo
+de la *magnitud* de un vector. En `sketch.js` está definida esta función (más
+abajo).
+
+<span style="color: blue;">¿Lo hacemos?</span>
