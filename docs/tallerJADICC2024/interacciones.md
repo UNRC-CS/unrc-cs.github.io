@@ -52,15 +52,22 @@ donde `(x,y)`  almacenará la posición de la esquina  superior izquierda de la 
 
 Pensemos ahora cómo se representa la pelotita y qué comportamiento deberá tener definido, luego  definimos la función apropiada.
 
-Lo hacemos?
+<span style="color: blue;">¿Lo hacemos?</span>
  
 
 <iframe src="https://editor.p5js.org/gastonscilingoDC/sketches/3GwhDf4Gq" width="600" height="600">></iframe>
 
 
 > [!TIP|label:NOTA]
-> Link para abrir este editor en otra ventana del navegador [Definiedo paletas y pelota en movimiento](https://editor.p5js.org/gastonscilingoDC/sketches/3GwhDf4Gq")
+> Link para abrir este editor en otra ventana del navegador [Definiedo paletas y pelota en movimiento](https://editor.p5js.org/gastonscilingoDC/sketches/3GwhDf4Gq)
 ### Dando movimiento a la pelota
+
+
+
+<iframe src="https://editor.p5js.org/gastonscilingoDC/sketches/N-yzZWI_z" width="600" height="600"></iframe>
+
+> [!TIP|label:NOTA]
+> Link para abrir este editor en otra ventana del navegador [Pelota en movimiento](https://editor.p5js.org/gastonscilingoDC/sketches/N-yzZWI_z)
 
 
 ### Dando movimiento a las paletas
@@ -90,8 +97,8 @@ function keyPressed() {
 > Las variables `BACKSPACE`, `DELETE`, `ENTER`, `RETURN`, `TAB`, `ESCAPE`, `SHIFT`, `CONTROL`, `OPTION`, `ALT`, `UP_ARROW`, `DOWN_ARROW`, `LEFT_ARROW` y `RIGHT_ARROW` 
 > son constantes útiles definidas por *p5.js* para los caracteres especiales.
 
+<span style="color: blue;">¿Lo hacemos?</span>
 
-Lo hacemos?
 
 
 <iframe src="https://editor.p5js.org/valebengolea/sketches/g7YxCkDCH" width="600" height="600"></iframe>
