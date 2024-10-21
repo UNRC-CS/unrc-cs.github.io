@@ -66,7 +66,7 @@ al ejecutarse `setup()`. Intentar usarlas antes generará errores.
 ## El canvas
 
 El *canvas* es un área de dibujo basado en una *matriz de píxeles*: Arreglo de
-puntos organizados en filas y columnas.
+puntos organizados en filas y columnas como se muestra en la siguiente figura.
 
 ![Coordenadas del canvas](img/coordinates.png ':class=center')
 
