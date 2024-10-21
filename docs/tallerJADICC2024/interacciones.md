@@ -50,7 +50,7 @@ function getPaleta(inicX, inicY) {
 donde `(x,y)`  almacenará la posición de la esquina  superior izquierda de la paleta, mientras que `ancho` y `alto`  almacenarán el ancho y alto de la paleta respectivamente. Recordemos que *p5js* nos provee funciones (`rect()`) para dibujar un rectángulo en el canvas. La función dibujar() encapsula este comportamiento para un objeto dado.
 
 
-Pensemos ahora cómo se representa la pelotita y qué compartamiento deberá tener definido, luego  definimos la función apropiada.
+Pensemos ahora cómo se representa la pelotita y qué comportamiento deberá tener definido, luego  definimos la función apropiada.
 
 Lo hacemos?
  
@@ -59,10 +59,11 @@ Lo hacemos?
 
 
 > [!TIP|label:NOTA]
-> Link para abrir este editor en otra ventana del navegador [Definiedo paletas y pelotas en movimiento](https://editor.p5js.org/gastonscilingoDC/sketches/3GwhDf4Gq")
+> Link para abrir este editor en otra ventana del navegador [Definiedo paletas y pelota en movimiento](https://editor.p5js.org/gastonscilingoDC/sketches/3GwhDf4Gq")
+### Dando movimiento a la pelota
 
 
-## Dando movimiento a las paletas
+### Dando movimiento a las paletas
 
 En este juego, el jugador controlará ambas paletas utilizando el teclado. La paleta derecha se moverá con las teclas de flecha  &uarr; y  &darr;, mientras que la paleta izquierda se manipulará con las teclas `a` (arriba) y `z` (abajo). Para lograr esto, *p5.js* nos ofrece varias funciones y variables que facilitan la gestión de eventos del teclado, como `keyPressed()`, `key` y `keyCode`, las cuales permiten detectar y manejar las entradas del usuario através del teclado.
 
@@ -98,6 +99,13 @@ Lo hacemos?
 
 > [!TIP|label:NOTA]
 > Link para abrir este editor en otra ventana del navegador [Moviendo las paletas](https://editor.p5js.org/valebengolea/sketches/g7YxCkDCH)
+
+
+
+Ya podemos controlar las paletas con el teclado!.  Lo que nos falta ahora es definir  cómo detectamos que una paleta tocó la pelotita y cuál es la reacción de la misma ante esta situación. La idea será que la pelotita rebote al tocar la paleta y para ello debemos en primer lugar determinar cuando la pelota colisiona con una paleta para luego, en tal situación  invertir la dirección de la velocidad de la pelota.
+
+
+   
 
 
 
