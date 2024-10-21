@@ -62,6 +62,13 @@ ejemplo crear el *canvas* (área de dibujo) en la página web.
 !> ***Atención***: Todas las funciones de *p5.js* estarán disponibles en
 al ejecutarse `setup()`. Intentar usarlas antes generará errores.
 
+## El canvas
+
+El *canvas* es un área de dibujo basado en una *matriz de píxeles*: Arreglo de
+puntos organizados en filas y columnas.
+
+![Coordenadas del canvas](img/coordinates.png ':class=center')
+
 El código de *p5.js* invocará a la función `draw()` repetidamente unas 60 veces
 por segundo, permitiéndonos programar animaciones fácilmente.
 

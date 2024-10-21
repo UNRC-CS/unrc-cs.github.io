@@ -6,11 +6,11 @@ movimiento* repetidamente en la pantalla (o canvas).
 En cada ciclo se deben realizar los siguientes pasos:
 
 1. Limpiar la pantalla
-2. Calcular las posiciones de cada objeto
-3. Calcular las nuevas velocidades (si hay rebotes o aplicaciones de fuerzas)
+2. Ajustar velocidades por rebotes y aceleraciones
+3. Calcular las posiciones de cada objeto
 4. Dibujar los objetos
 
-Ya vimos que en *p5.js* implementando estos tres pasos en la función `draw()` es
+Ya vimos que en *p5.js* implementando estos pasos en la función `draw()` es
 suficiente ya que el sistema la ejecuta repetidamente en forma automática.
 
 -------------------------------------------------------------------------------
@@ -19,8 +19,6 @@ suficiente ya que el sistema la ejecuta repetidamente en forma automática.
 
 Cada objeto en movimiento tendrá una *posición* actual y una *velocidad*. Ambas
 propiedades pueden representarse por un *vector*.
-
-
 
 > Un *vector* representa una *magnitud* y una *dirección*. Pueden usarse para
 > representar un punto en un sistema cartesiano, o una *fuerza*.
@@ -43,8 +41,8 @@ Es posible representar un vector (ej: en 2D) como:
 Ver [vectores](https://p5js.org/es/reference/p5/p5.Vector/).
 
 Un *vector velocidad* $v$ indica cuál es la *variación horizontal y vertical* de
-la posición del objeto en un intervalo de tiempo $t$. Por lo tanto la *nueva
-posición* debe computarse según la ecuación 
+la posición del objeto en un intervalo de tiempo $t$. La *nueva posición* debe
+computarse según la ecuación
 
 $$p' = p + v \times t$$
 
@@ -80,8 +78,21 @@ let circulo = {
 ```
 
 En el [sketch](https://editor.p5js.org/marroyo/sketches/dZyp4-S06) podemos ver
-una primera versión de objetos en movimiento. 
+una primera versión de objetos en movimiento. En `utils.js` podemos ver una
+función para crear círculos.
 
 Analicémosla!!!
 
-## 
+## Colisiones simples
+
+Si queremos lograr efectos de rebotes, debemos hacer cambios en la *dirección*
+de la velocidad de los objetos en una colisión.
+
+Agreguemos la lógica para que los círculos reboten en los extremos del canvas.
+Sería bueno que cada objeto tenga una propiedad que determine si debe rebotar en
+los límites del canvas o no.
+
+Debemos hacer que su dirección se invierta en la función
+`actualizarVelocidad()`.
+
+Lo hacemos?
