@@ -27,9 +27,40 @@ Para comenzar definamos el tamaño de nuestra cancha como una constante `const c
 
 Nuestro juego contará de tres objetos móviles, la pelotita y las dos paletas. Intentaremos imitar la estética retro pixelada del juego original. La pelotita será un simple cuadrado y las paletas dos rectángulos por el momento. Definiremos objetos `javascript` para representar nuestros objetos del juego y utilizaremos la función `rect()` de *p5.js* para dibujarlos.
 
-TBC
+Cada  uno de estos objeto (pelotita, paleta izquierda y paleta derecha) deberá estar representado de  manera tal que  podamos "recordar" su estado, como posición, velocidad, tamaño, color, etc. En el caso de las paletas  una función para construir  las paletas se verá como:
 
-<iframe src="https://editor.p5js.org/gastonscilingoDC/full/3GwhDf4Gq" width="600" height="600">></iframe>
+```js
+
+function getPaleta(inicX, inicY) {
+  return {
+    x : inicX,
+    y : inicY,
+    ancho : 10,
+    alto : 30,
+  
+    dibujar(){
+      rect(this.x, this.y, this.ancho, this.alto);
+    }
+    
+   }
+}
+```
+
+
+donde `(x,y)`  almacenará la posición de la esquina  superior izquierda de la paleta, mientras que `ancho` y `alto`  almacenarán el ancho y alto de la paleta respectivamente. Recordemos que *p5js* nos provee funciones (`rect()`) para dibujar un rectángulo en el canvas. La función dibujar() encapsula este comportamiento para un objeto dado.
+
+
+Pensemos ahora cómo se representa la pelotita y qué compartamiento deberá tener definido, luego  definimos la función apropiada.
+
+Lo hacemos?
+ 
+
+<iframe src="https://editor.p5js.org/gastonscilingoDC/sketches/3GwhDf4Gq" width="600" height="600">></iframe>
+
+
+> [!TIP|label:NOTA]
+> Link para abrir este editor en otra ventana del navegador [Definiedo paletas y pelotas en movimiento](https://editor.p5js.org/gastonscilingoDC/sketches/3GwhDf4Gq")
+
 
 ## Dando movimiento a las paletas
 
