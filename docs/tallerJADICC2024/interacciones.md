@@ -33,6 +33,9 @@ TBC
 
 ## Dando movimiento a las paletas
 
+En este juego, las dos paletas serán manipuladas por el jugador, es decir  reccionarán a eventos del teclado.  En este caso particular  haremos que el jugador manipule la paleta derecha con  las teclas &uarr; , &darr;; y la paleta izquierda con las teclas `a` y `z`.  Para ello, *P5.js* provee algunas  funciones y variables   que nos permitirán manipular  eventos del teclado, como `keyPressed()` y `key`, las cuales  se utilizan para detectar y manejar entradas del usuario a través del teclado.
+
+
 TBC : uso de keyPressed() y key 
 
 
