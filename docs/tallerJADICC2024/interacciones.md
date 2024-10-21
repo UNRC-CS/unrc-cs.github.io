@@ -33,10 +33,41 @@ TBC
 
 ## Dando movimiento a las paletas
 
-En este juego, las dos paletas serán manipuladas por el jugador, es decir  reccionarán a eventos del teclado.  En este caso particular  haremos que el jugador manipule la paleta derecha con  las teclas &uarr; , &darr;; y la paleta izquierda con las teclas `a` y `z`.  Para ello, *P5.js* provee algunas  funciones y variables   que nos permitirán manipular  eventos del teclado, como `keyPressed()` y `key`, las cuales  se utilizan para detectar y manejar entradas del usuario a través del teclado.
+En este juego, el jugador controlará ambas paletas utilizando el teclado. La paleta derecha se moverá con las teclas de flecha  &uarr; y  &darr;, mientras que la paleta izquierda se manipulará con las teclas `a` (arriba) y `z` (abajo). Para lograr esto, *p5.js* nos ofrece varias funciones y variables que facilitan la gestión de eventos del teclado, como `keyPressed()`, `key` y `keyCode`, las cuales permiten detectar y manejar las entradas del usuario através del teclado.
+
+```js
+
+function keyPressed() {
+  if (key === 'a') {
+    // Código a ejecutar si se presiona la letra a
+  }
+
+  if (keyCode === ENTER) {
+    // Código a ejecutar sis e presiona un enter
+  }
+}
 
 
-TBC : uso de keyPressed() y key 
+```
+
+
+* `keyPressed()` es una función que se ejecuta automáticamente cuando el usuario presiona cualquier tecla del teclado. Es útil para capturar cuándo una tecla ha sido presionada y realizar acciones en consecuencia.
+
+* `key` es variable global de *p5.js* que almacena el valor de la tecla presionada más recientemente. `key` no se actualiza cuando se trata de caracteres especiales como `LEFT_ARROW` y `ENTER`. En estos casos utilizamos la variable `keyCode`. `keyCode es una variable global que almacena el código ASCII de la última tecla presionada. 
+
+> Las variables `BACKSPACE`, `DELETE`, `ENTER`, `RETURN`, `TAB`, `ESCAPE`, `SHIFT`, `CONTROL`, `OPTION`, `ALT`, `UP_ARROW`, `DOWN_ARROW`, `LEFT_ARROW` y `RIGHT_ARROW` 
+> son constantes útiles definidas por *p5.js* para los caracteres especiales.
+
+
+Lo hacemos?
+
+
+<iframe src="https://editor.p5js.org/valebengolea/sketches/g7YxCkDCH" width="600" height="600"></iframe>
+
+
+> [!TIP|label:NOTA]
+> Link para abrir este editor en otra ventana del navegador [Moviendo las paletas](https://editor.p5js.org/valebengolea/sketches/g7YxCkDCH)
+
 
 
 
