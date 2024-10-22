@@ -2,6 +2,5 @@
 * [Comencemos](getting-started.md)
 * [Animaciones](animaciones.md)
 * [fuerzas y colisiones](colisiones.md)
-* [Interacción](interacciones.md)
 * [Proyecto de programación en p5.js](proyecto.md)
 * [Usando p5.js en el aula](usop5.md)
