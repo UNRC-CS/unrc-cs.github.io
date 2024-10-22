@@ -19,7 +19,7 @@ esencial). Se puede seleccionar el idioma español en el menú de arriba a la
 derecha. Para verlo mas grande pueden ocultar la barra de navegación de la
 izquierda haciendo click en el botón <span style="color: green;">&equiv;</span>.
 
-<iframe src="https://editor.p5js.org/"  width="600" height="600"></iframe>
+<iframe src="https://editor.p5js.org/"  width="600" height="700"></iframe>
 
 -------------------------------------------------------------------------------
 
@@ -42,8 +42,9 @@ archivos: `index.html`, `style.css`, y `sketch.js`.
 
 El archivo `index.html` es página web que contiene la interfaz gráfica de la
 aplicación y incluye la hoja de estilos `style.css` y el código Javascript
-`sketch.js`. El archivo `sketch.js` contiene inicialmente dos funciones: `setup()` y
-`draw()`.
+`sketch.js`. El archivo `sketch.js` contiene inicialmente dos funciones:
+`setup()` y `draw()`. Podemos considerar a `sketch.js` el módulo principal de la
+aplicación.
 
 ```js
 function setup() {
@@ -55,13 +56,14 @@ function draw() {
 }
 ```
 
-Al iniciarse la aplicación, *p5.js* ejecutará `setup()` por única vez al
-comienzo, luego de crear algunos objetos internos. Podemos usar esta función
-para definir configuraciones o valores iniciales de nuestro proyecto, como por
-ejemplo crear el *canvas* (área de dibujo) en la página web.
+Al iniciarse la aplicación *p5.js* ejecutará `setup()` por única vez al
+comienzo luego de crear algunos objetos internos. Podemos usar esta función
+para crear los objetos iniciales.
 
 !> ***Atención***: Todas las funciones de *p5.js* estarán disponibles a partir
 de `setup()`. Intentar usarlas antes generará errores.
+
+-------------------------------------------------------------------------------
 
 ## El canvas
 
@@ -143,7 +145,6 @@ function draw() {
   // círculo rojo con centro (80,110), diámetro: 50
   fill(rojo());
   circle(80, 110, 50);
-
   // rectángulo verde en (100,120), ancho: 80, alto: 65
   fill(verde());
   rect(100, 200, 80, 65);
@@ -152,5 +153,6 @@ function draw() {
 
 Copiar y pegar el código anterior en el editor y luego ejecutarlo.
 
-Para ver el conjunto de funciones y estructuras de datos que contiene *p5.js* ir
-a la sección [Referencia](https://p5js.org/es/reference/).
+En la sección [Referencia](https://p5js.org/es/reference/) podemos encontrar la
+documentación del conjunto de funciones y estructuras de datos que provee
+*p5.js*.

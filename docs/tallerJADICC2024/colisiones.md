@@ -26,10 +26,11 @@ o *y* (según corresponda) en una colisión.
 La *fricción* o *tracción* representa una fuerza que *frena* el objeto en su
 dirección horizontal, comúnmente al desplazarse en el piso.
 
-El siguiente sketch aplica estas ideas en la función `actualizarVelocidad(obj)`
-en el archivo `dinamica.js`.
+El siguiente [sketch](https://editor.p5js.org/marroyo/sketches/AB6ic6ELu) aplica
+estas ideas en la función `actualizarVelocidad(obj)` en el archivo
+`dinamica.js`.
 
-<iframe src="https://editor.p5js.org/marroyo/full/AB6ic6ELu"
+<iframe src="https://editor.p5js.org/marroyo/sketches/AB6ic6ELu"
         width="600" height="600"></iframe>
 
 Podemos experimentar cambiando las propiedades al objeto.
@@ -44,7 +45,7 @@ resolver dos problemas:
    resultantes de la colisión.
 
 > Para detectar si dos círculos *colisionan* basta con detectar si se
-> *superponen*. Los círculos $c_1$ y $c_2$ se superponen si la distancie entre
+> *superponen*. Los círculos $c_1$ y $c_2$ se superponen si la distancia entre
 > sus centros es menor o igual a la suma de sus radios, como se muestra en la
 > siguiente figura.
 
@@ -59,10 +60,11 @@ resolver dos problemas:
 
 En el modelo de *choque elástico* no hay pérdida de energía en el sistema.
 
-Las ecuaciones de Newton de la conservación de la energía y del momento lineal,
-teniendo en cuenta la *velocidad* y la *masa* de cada objeto, llevan a que se
-pueden calcular las nuevas velocidades para cada objeto mediante las ecuaciones
-(ver [choque elástico](https://es.wikipedia.org/wiki/Choque_el%C3%A1stico)):
+Desde las ecuaciones de Newton de la conservación de la energía y del momento
+lineal, teniendo en cuenta la *velocidad* y la *masa* de cada objeto, se pueden
+derivar las siguientes ecuaciones para el cálculo de las nuevas velocidades
+luego de una colisión (ver [choque
+elástico](https://es.wikipedia.org/wiki/Choque_el%C3%A1stico)):
 
 $$v_1' = \frac{v_1 \times (m_1-m_2) + 2 \times (v_2 \times m_2)}{m_1 + m_2}$$
 
@@ -73,19 +75,21 @@ $$v_2' = \frac{v_2 \times (m_2-m_1) + 2 \times (v_1 \times m_1)}{m_1 + m_2}$$
 donde $v_1'$ y $v_2'$ son las nuevas velocidades de un objeto con velocidad
 $v_1$ y masa $m_1$ y otro con velocidad $v_2$ y masa $m_2$.
 
-En el siguiente sketch se incluyen las funciones 
+En el siguiente [sketch](https://editor.p5js.org/marroyo/sketches/iuq-RAfVd) se
+incluye un nuevo archivo (`colisiones.js`) con funciones que implementan
+colisiones entre círculos.
 
 La función `actualizarVelocidad(obj)` ahora invoca a la función
 `procesarColisiones(obj)` (definida en el archivo `colisiones.js`) que detecta
 colisiones entre círculos y hace que éstos reaccionen en base a su masa y
 velocidad.
 
-La masa de cada círculo es proporcional a su radio. Ver la función `circulo()`
-en `ùtils.js`.
-
-<iframe src="https://editor.p5js.org/marroyo/full/iuq-RAfVd"
-        width="600" height="600">
-</iframe>
+En éste ejemplo hicimos que la masa de cada círculo es proporcional a su radio.
+Ver la función `circulo()` en `utils.js`.
 
 La función `procesarColisiones(obj)` determina si `obj` colisiona con algún otro
-objeto en cuyo caso procesa la reacción usando las ecuaciones dadas arriba.
+objeto en cuyo caso procesa la reacción usando las ecuaciones dadas.
+
+<iframe src="https://editor.p5js.org/marroyo/sketches/iuq-RAfVd"
+        width="600" height="600">
+</iframe>

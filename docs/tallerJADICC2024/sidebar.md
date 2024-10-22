@@ -3,3 +3,4 @@
 * [Animaciones](animaciones.md)
 * [fuerzas y colisiones](colisiones.md)
 * [Interacción](interacciones.md)
+* [Usando p5.js en el aula](usop5.md)
