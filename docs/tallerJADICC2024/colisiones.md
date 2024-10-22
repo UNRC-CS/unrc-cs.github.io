@@ -61,7 +61,8 @@ En el modelo de *choque elástico* no hay pérdida de energía en el sistema.
 
 Las ecuaciones de Newton de la conservación de la energía y del momento lineal,
 teniendo en cuenta la *velocidad* y la *masa* de cada objeto, llevan a que se
-pueden calcular las nuevas velocidades para cada objeto mediante las ecuaciones:
+pueden calcular las nuevas velocidades para cada objeto mediante las ecuaciones
+(ver [choque elástico](https://es.wikipedia.org/wiki/Choque_el%C3%A1stico)):
 
 $$v_1' = \frac{v_1 \times (m_1-m_2) + 2 \times (v_2 \times m_2)}{m_1 + m_2}$$
 
@@ -69,8 +70,8 @@ y
 
 $$v_2' = \frac{v_2 \times (m_2-m_1) + 2 \times (v_1 \times m_1)}{m_1 + m_2}$$
 
-donde $v_1'$ y $v_2'$ son las nuevas velocidades de los objetos $o_1$ (con
-velocidad $v_1$ y masa $m_1$) y $o_2$ (con velocidad $v_2$ y masa $m_2$).
+donde $v_1'$ y $v_2'$ son las nuevas velocidades de un objeto con velocidad
+$v_1$ y masa $m_1$ y otro con velocidad $v_2$ y masa $m_2$.
 
 En el siguiente sketch se incluyen las funciones 
 

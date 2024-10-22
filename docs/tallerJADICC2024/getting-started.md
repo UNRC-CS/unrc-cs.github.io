@@ -60,8 +60,8 @@ comienzo, luego de crear algunos objetos internos. Podemos usar esta función
 para definir configuraciones o valores iniciales de nuestro proyecto, como por
 ejemplo crear el *canvas* (área de dibujo) en la página web.
 
-!> ***Atención***: Todas las funciones de *p5.js* estarán disponibles en
-al ejecutarse `setup()`. Intentar usarlas antes generará errores.
+!> ***Atención***: Todas las funciones de *p5.js* estarán disponibles a partir
+de `setup()`. Intentar usarlas antes generará errores.
 
 ## El canvas
 
