@@ -1,5 +1,7 @@
 # **Desarrollo de proyectos de enseñanza de programación con p5.js**
 
+## JADICC 2024
+
 Valeria Bengolea, Gastón Scilingo, Marcelo Arroyo
 
 [Departamento de Computación -FCEFQyN - UNRC](https://dc.exa.unrc.edu.ar)
