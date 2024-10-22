@@ -136,7 +136,24 @@ Definamos, como parte del objeto paleta, la función `colisionaCon(pelota)` la c
 
 ## ¿Quién es el ganador?
 
+Estamos muy cerca de finalizar. Las paletas responden a los eventos del teclado, y la pelotita no solo se mueve, sino que también rebota (cambia de dirección) al ser golpeada por una paleta.
 
-TBD
+¡Solo nos queda llevar la cuenta de los puntos de cada jugador!
 
-<iframe src="https://editor.p5js.org/gastonscilingoDC/full/LPdkOm2zq" width="600" height="600"></iframe> 
+
+
+> Contamos un punto para el jugador de la derecha cuando la pelota sobrepasó la pared izquiera y, contamos un punto para el jugador de la 
+> izquierda cuando la pelota sobrepasó la pared derecha.
+
+Te invitamos a  analizar cómo fue construido el objeto punto y cómo esta definida la función `verificarGol()`
+
+<span style="color: blue;">¿Jugamos?</span>
+
+
+<iframe src="https://editor.p5js.org/gastonscilingoDC/full/LPdkOm2zq" width="600" height="600"></iframe>
+
+
+
+> [!TIP|label:NOTA]
+> Link para abrir este editor en otra ventana del navegador [Juego terminado](https://editor.p5js.org/gastonscilingoDC/sketches/LPdkOm2zq)
+ 
