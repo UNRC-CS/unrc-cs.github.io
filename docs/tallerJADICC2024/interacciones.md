@@ -14,7 +14,7 @@ Los videojuegos son las aplicaciones interactivas por excelencia, y suelen ser m
 
 ## Definiendo el área de juego
 
-Para comenzar definamos el tamaño de nuestra cancha como una constante `const courtSize`, crearemos el canvas utilizándola y luego dibujaremos la red con la función `dibujarRed()`.
+Para comenzar definamos el tamaño de nuestra cancha como una constante `const courtSize`, crearemos el canvas utilizándola y luego dibujaremos la red mediante la función `dibujarRed()`.
 
 <iframe src="https://editor.p5js.org/gastonscilingoDC/sketches/WEus676AV" width="600" height="600"></iframe>
 
@@ -47,10 +47,10 @@ function getPaleta(inicX, inicY) {
 ```
 
 
-donde `(x,y)`  almacenará la posición de la esquina  superior izquierda de la paleta, mientras que `ancho` y `alto`  almacenarán el ancho y alto de la paleta respectivamente. Recordemos que *p5js* nos provee funciones (`rect()`) para dibujar un rectángulo en el canvas. La función dibujar() encapsula este comportamiento para un objeto dado.
+donde `(x,y)`  almacenará la posición de la esquina  superior izquierda de la paleta, mientras que `ancho` y `alto`  almacenarán el ancho y alto de la paleta respectivamente. Recordemos que *p5js* nos provee funciones (`rect()`) para dibujar un rectángulo en el canvas. La función `dibujar()` encapsula este comportamiento para un objeto dado.
 
 
-Pensemos ahora cómo se representa la pelotita y qué comportamiento deberá tener definido, luego  definimos la función apropiada.
+Pensemos ahora cómo se representa la pelotita y qué comportamiento deberá tener definido, luego  definimos la función apropiada (`getPelota()`).
 
 <span style="color: blue;">¿Lo hacemos?</span>
  
@@ -87,7 +87,7 @@ function keyPressed() {
   }
 
   if (keyCode === ENTER) {
-    // Código a ejecutar sis e presiona un enter
+    // Código a ejecutar si se presiona la tecla enter
   }
 }
 
@@ -97,9 +97,9 @@ function keyPressed() {
 
 * `keyPressed()` es una función que se ejecuta automáticamente cuando el usuario presiona cualquier tecla del teclado. Es útil para capturar cuándo una tecla ha sido presionada y realizar acciones en consecuencia.
 
-* `key` es variable global de *p5.js* que almacena el valor de la tecla presionada más recientemente. `key` no se actualiza cuando se trata de caracteres especiales como `LEFT_ARROW` y `ENTER`. En estos casos utilizamos la variable `keyCode`. `keyCode es una variable global que almacena el código ASCII de la última tecla presionada. 
+* `key` es una variable global de *p5.js* que almacena el valor de la tecla presionada más recientemente. `key` no se actualiza cuando se trata de caracteres especiales como `LEFT_ARROW` y `ENTER`. En estos casos utilizamos la variable `keyCode`. `keyCode` es una variable global que almacena el código ASCII de la última tecla presionada. 
 
-> Las variables `BACKSPACE`, `DELETE`, `ENTER`, `RETURN`, `TAB`, `ESCAPE`, `SHIFT`, `CONTROL`, `OPTION`, `ALT`, `UP_ARROW`, `DOWN_ARROW`, `LEFT_ARROW` y `RIGHT_ARROW` 
+> Las constantes `BACKSPACE`, `DELETE`, `ENTER`, `RETURN`, `TAB`, `ESCAPE`, `SHIFT`, `CONTROL`, `OPTION`, `ALT`, `UP_ARROW`, `DOWN_ARROW`, `LEFT_ARROW` y `RIGHT_ARROW` 
 > son constantes útiles definidas por *p5.js* para los caracteres especiales.
 
 <span style="color: blue;">¿Lo hacemos?</span>
@@ -113,17 +113,17 @@ function keyPressed() {
 
 Ya podemos controlar las paletas con el teclado!  
 
-Lo que nos falta ahora es definir  cómo detectamos que una paleta tocó la pelotita y cuál es la reacción de la misma ante esta situación. La idea será que la pelotita rebote al tocar la paleta y para ello, debemos en primer lugar determinar si la pelota colisionó con una paleta, para luego, en tal situación  invertir la dirección  de la pelota.
+Ahora necesitamos definir  cómo detectamos si una pelota tocó una de las paletas y cuál es la reacción de la misma ante esta situación. La idea será que la pelota rebote al tocar una paleta y para ello, debemos en primer lugar determinar si la pelota colisionó con una paleta, para luego en tal situación,  invertir la dirección  de la pelota.
 
 ### Devolviendo la pelota con la paleta
    
 <iframe src="https://editor.p5js.org/gastonscilingoDC/sketches/Pj6feCWFu" width="600" height="600"></iframe>
 
-Definamos, como parte del objeto paleta, la función `colisionaCon(pelota)` la cual returna `true` si la paleta toca a la pelota y `false` en caso contrario. Luego restará definir la función `verificarColisiones()`,  lo cual produce que la pelota rebote  (cambie su dirección) cuando toca una de las paletas.
+Definamos, como parte del objeto paleta, la función `colisionaCon(pelota)` la cual retorna `true` si la paleta toca a la pelota y `false` en caso contrario. Luego restará definir la función `verificarColisiones()`,  lo cual produce que la pelota rebote  (cambie su dirección) cuando toca una de las paletas.
 
 
 > Para detectar si dos rectángulos colisionan basta detectar si se superponen. Sean  los rectángulos $r$ y $s$ tales que 
-> $r$ esta definido por los puntos ($rx_1$,$ry_1$) y ($rx_2$,$ry_2$) esquinas superior izquierda y esquina inferior derecha de $r$ respectivamente; y $s$ esta definido por los puntos ($sx_1$,$sy_1$) y ($sx_2$,$sy_2$) esquinas superior izquierda y esquina inferior derecha de $s$  respectivamentes.
+> $r$ esta definido por los puntos ($rx_1$,$ry_1$) y ($rx_2$,$ry_2$) esquina superior izquierda y esquina inferior derecha de $r$ respectivamente; y $s$ esta definido por los puntos ($sx_1$,$sy_1$) y ($sx_2$,$sy_2$) esquinas superior izquierda y esquina inferior derecha de $s$  respectivamente.
 > 
 > $r$ y $s$ colisionan si:
 >
