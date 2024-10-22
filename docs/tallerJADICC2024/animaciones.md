@@ -26,23 +26,27 @@ propiedades pueden representarse con *vectores*.
 
 Es posible representar un vector (ej: en 2D) como:
 
-1. *Coordenadas cartesiana*: Un par de la forma *(x,y)*. 
-    
-    Su *magnitud* $m$ es la distancia desde el punto *(0,0)* a *(x,y)*:
-
-    $$\mid \overrightarrow{v} \mid=\sqrt{v.x^2 + v.y^2}$$
-
-    El *ángulo* $\alpha$:
-    $$\alpha(\overrightarrow{v}) = cos^{-1}\left( {\frac{v.x}{\mid
-    \overrightarrow{v} \mid}} \right)$$
-    
+1. *Coordenadas cartesiana*: Un par de la forma *(x,y)*.
 2. *Coordenadas polares*: Un par de la forma *(ángulo, magnitud)*.
+
+Es posible convertir entre representaciones. Desde un vector en coordenadas
+cartesianas podemos obtener su *magnitud* $m$ calculando la distancia desde el
+punto *(0,0)* a *(x,y)* usando el teorema de Pitágoras:
+
+$$\mid \overrightarrow{v} \mid=\sqrt{v.x^2 + v.y^2}$$
+
+El ángulo $\alpha$ se obtiene mediante el uso de trigonometría:
+
+$$\alpha(\overrightarrow{v}) = cos^{-1}\left( {\frac{v.x}{\mid
+\overrightarrow{v} \mid}} \right)$$
 
 *P5.js* usa vectores cartesianos 3D de la forma $(x,y,z)$.
 Ver [vectores](https://p5js.org/es/reference/p5/p5.Vector/).
 
 Por ahora no usaremos los vectores de *p5.js*, sino que los definiremos
 explícitamente como pares *(x,y)*.
+
+-------------------------------------------------------------------------------
 
 Un *vector velocidad* $v$ indica cuál es la *variación horizontal y vertical* de
 la posición del objeto en un intervalo de tiempo $t$. La *nueva posición* debe
@@ -84,9 +88,6 @@ let circulo = {
 Debajo vemos un sketch con una podemos ver una primera versión de objetos en
 movimiento. En `utils.js` podemos ver una función para crear círculos.
 
-> Nota: Si sólo ven la ejecución del programa hacer click en el nombre del
-> sketch (*taller-p5-v1*).
-
 Hacer click [aquí](https://editor.p5js.org/marroyo/sketches/dZyp4-S06) si desean
 abrir el sketch en otra pestaña o ventana del navegador.
 
@@ -95,26 +96,13 @@ abrir el sketch en otra pestaña o ventana del navegador.
 
 -------------------------------------------------------------------------------
 
-## Colisiones simples
+## Rebotes en los límites del canvas
 
 Si queremos lograr efectos de rebotes en los límites del canvas, debemos hacer
 cambios en la *dirección* de la velocidad de los objetos en una colisión.
 
 Aplicaremos el efecto de rebote a los objetos que tengan la propiedad
 `rebotaEnCanvas`.
-
-En el siguiente [sketch](https://editor.p5js.org/marroyo/sketches/VQiUttPI5)
-incluimos el efecto de rebote en los límites del canvas.
-
-Se debe notar que se movió el código de cálculo de la posición a una función en
-el archivo `dinamica.js` (script incluido en `index.html`).
-
-En `dinamica.js` la función `actualizarPosición(obj)` invocada desde `draw()`
-ahora invoca a `actualizarVelocidad(obj)` para eventualmente cambiar la
-dirección de la velocidad ante un rebote en los límites del canvas.
-
-<iframe src="https://editor.p5js.org/marroyo/sketches/VQiUttPI5" 
-        width="600" height="600"></iframe>
 
 Veamos la lógica para determinar si rebotamos en las paredes izquierda o derecha.
 
@@ -128,13 +116,26 @@ del vector *velocidad*).
 Hacemos lo mismo para los rebotes en el techo y piso, usando la posición *y*
 invirtiendo el componente *y* del vector *velocidad*.
 
+En el siguiente [sketch](https://editor.p5js.org/marroyo/sketches/VQiUttPI5)
+incluimos el efecto de rebote en los límites del canvas.
+
+El código de cálculo de la posición se movió a a una función en
+el archivo `dinamica.js`. Cada script se debe incluir en `index.html`.
+
+En `dinamica.js` la función `actualizarPosición(obj)` invocada desde `draw()`
+ahora invoca a `actualizarVelocidad(obj)` para eventualmente cambiar la
+dirección de la velocidad ante un rebote en los límites del canvas.
+
+<iframe src="https://editor.p5js.org/marroyo/sketches/VQiUttPI5" 
+        width="600" height="600"></iframe>
+
 -------------------------------------------------------------------------------
 
 ## Interacción con el mouse
 
-Si definimos la función `mouseClicked()`, ésta *p5.js* la invocará en cada click
-del mouse. Además define las variables globales `mouseX` y `mouseY` que
-representan la coordenada *(x,y)* del canvas donde ocurrió el click.
+Si definimos la función `mouseClicked()`, *p5.js* la invocará en cada click del
+mouse. Además define las variables globales `mouseX` y `mouseY` que representan
+la coordenada *(x,y)* del canvas donde ocurrió el click.
 
 > ***Ejercicio***: Incrementar la velocidad horizontal del círculo cada vez que
 > se hace un click sobre él.
@@ -146,8 +147,8 @@ representan la coordenada *(x,y)* del canvas donde ocurrió el click.
 > $r$.
 
 Ya vimos cómo calcular la *distancia entre dos puntos* cuando vimos el cálculo
-de la *magnitud* de un vector. En `sketch.js` está definida esta función (más
-abajo).
+de la *magnitud* de un vector. En `sketch.js` ésta función ya está definida al
+final.
 
 > ***Ejercicio***: Modificar la condición de la línea 32 (`ìf (...)`) para
 > determinar si se hizo click dentro del círculo.

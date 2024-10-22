@@ -48,5 +48,5 @@ debemos crear un `ìframe` de la forma
 
 Reemplazá el *url* de tu propio sketch en el atributo `src` para que aparezca en
 una página. En la opción `Archivo -> Compartir` el editor en línea ofrece los
-urls en diferentes modos: incrustar, visualización de ejecusión (full) y el
+urls en diferentes modos: incrustar, visualización de ejecución (full) y el
 enlace de edición.

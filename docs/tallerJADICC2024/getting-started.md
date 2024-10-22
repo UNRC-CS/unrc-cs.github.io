@@ -46,16 +46,6 @@ aplicación y incluye la hoja de estilos `style.css` y el código Javascript
 `setup()` y `draw()`. Podemos considerar a `sketch.js` el módulo principal de la
 aplicación.
 
-```js
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  background(220);
-}
-```
-
 Al iniciarse la aplicación *p5.js* ejecutará `setup()` por única vez al
 comienzo luego de crear algunos objetos internos. Podemos usar esta función
 para crear los objetos iniciales.
