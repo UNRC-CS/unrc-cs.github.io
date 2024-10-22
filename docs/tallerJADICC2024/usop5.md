@@ -10,6 +10,8 @@ aunque no lo dejará grabar sus modificaciones hasta que ingrese con su cuenta.
 Podemos crear una cuenta en el sitio de *p5.js* o acceder con nuestra cuenta de
 *Google*.
 
+-------------------------------------------------------------------------------
+
 ## Uso de *p5.js* localmente (desconectado)
 
 En el caso que no se disponga de acceso a Internet, es posible trabajar con
@@ -37,13 +39,15 @@ El editor libre [Visual Studio Code](https://code.visualstudio.com/) contiene
 instalar otros complementos que permiten crear proyectos y ejecutarlos lanzando un
 *servidor web* local y abre la aplicación directamente en el navegador web.
 
+-------------------------------------------------------------------------------
+
 ## Cómo incluir un sketch en una página web
 
 Es muy simple incluir un sketch o el editor en una página web. Simplemente
-debemos crear un `ìframe` de la forma
+debemos incluir un `ìframe` de la forma
 
 ```html
-<iframe src="https://editor.p5js.org/" width="600" height="700"><iframe>
+<iframe src="https://editor.p5js.org/" width="600" height="700"></iframe>
 ```
 
 Reemplazá el *url* de tu propio sketch en el atributo `src` para que aparezca en
