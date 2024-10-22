@@ -8,7 +8,7 @@ Los videojuegos son las aplicaciones interactivas por excelencia, y suelen ser m
 
 <!-- La idea del juego es muy simple: dos jugadores controlan paletas y deben tratar de atajar/golpear la pelota evitando que esta toque el limite de la cancha que está a sus espaldas; si la pelota toca el limite que está detrás de la paleta, el contrario anota un punto.-->
 
-![imagen pong .center](img/PongGame.gif)
+![imagen pong](img/PongGame.gif ":class=center")
 
 -------------------------------------------------------------------------------
 
