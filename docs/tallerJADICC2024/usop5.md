@@ -36,3 +36,17 @@ El editor libre [Visual Studio Code](https://code.visualstudio.com/) contiene
 *complementos* para trabajar con *p5.js*. El complemento `p5.vscode` permite
 instalar otros complementos que permiten crear proyectos y ejecutarlos lanzando un
 *servidor web* local y abre la aplicación directamente en el navegador web.
+
+## Cómo incluir un sketch en una página web
+
+Es muy simple incluir un sketch o el editor en una página web. Simplemente
+debemos crear un `ìframe` de la forma
+
+```html
+<iframe src="https://editor.p5js.org/" width="600" height="700"><iframe>
+```
+
+Reemplazá el *url* de tu propio sketch en el atributo `src` para que aparezca en
+una página. En la opción `Archivo -> Compartir` el editor en línea ofrece los
+urls en diferentes modos: incrustar, visualización de ejecusión (full) y el
+enlace de edición.

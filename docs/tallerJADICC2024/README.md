@@ -26,7 +26,7 @@
 Existen dos alternativas:
 
 1. *Offline*: Un editor de programación (texto plano) luego de haber descargado
-   `p5.js`. Ver la sección [Descargar](https://p5js.org/es/download/)
+   `p5.js`. Ver la sección [Uso de p5.js](usop5.md)
 4. Usar el [Editor](https://editor.p5js.org/) en línea. Este servicio es gratuito.
 
 -------------------------------------------------------------------------------
