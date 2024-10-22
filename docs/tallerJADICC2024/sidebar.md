@@ -2,4 +2,4 @@
 * [Comencemos](getting-started.md)
 * [Animaciones](animaciones.md)
 * [fuerzas y colisiones](colisiones.md)
-* [Proyecto de programación en p5.js](interacciones.md)
+* [Proyecto de programación en p5.js](proyecto.md)
