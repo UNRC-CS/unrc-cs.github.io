@@ -100,20 +100,20 @@ function keyPressed() {
 <span style="color: blue;">¿Lo hacemos?</span>
 
 
-
-<iframe src="https://editor.p5js.org/valebengolea/sketches/g7YxCkDCH" width="600" height="600"></iframe>
+<iframe src="https://editor.p5js.org/gastonscilingoDC/sketches/dy5-wUVe7" width="600" height="600"></iframe>
 
 
 > [!TIP|label:NOTA]
-> Link para abrir este editor en otra ventana del navegador [Moviendo las paletas](https://editor.p5js.org/valebengolea/sketches/g7YxCkDCH)
+> Link para abrir este editor en otra ventana del navegador [Moviendo las paletas](https://editor.p5js.org/gastonscilingoDC/sketches/dy5-wUVe7)
 
 
+### Devolviendo la pelota con la paleta
 
 Ya podemos controlar las paletas con el teclado!.  Lo que nos falta ahora es definir  cómo detectamos que una paleta tocó la pelotita y cuál es la reacción de la misma ante esta situación. La idea será que la pelotita rebote al tocar la paleta y para ello debemos en primer lugar determinar cuando la pelota colisiona con una paleta para luego, en tal situación  invertir la dirección de la velocidad de la pelota.
 
 
    
-
+<iframe src="https://editor.p5js.org/gastonscilingoDC/sketches/Pj6feCWFu" width="600" height="600"></iframe>
 
 
 
