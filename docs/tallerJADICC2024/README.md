@@ -5,6 +5,8 @@
 - Describir el entorno de programación en la web con p5.js 
 - Proponer el desarrollo de proyectos de enseñanza de la programación
 - Desarrollar un proyecto simple de ejemplo
+- Dar algunas ideas de proyectos integradores con otras materias (matemáticas,
+  física, ...)
 
 -------------------------------------------------------------------------------
 
@@ -34,8 +36,12 @@ Existen dos alternativas:
 - Permite desarrollar aplicaciones que se ejecutan en un navegador web sin tener
   que instalar software complejo
 - Las aplicaciones pueden contener gráficos, animaciones y contenido multimedia
-  soportado por HTML5 y sus APIs en javascript modernas
+  soportado por HTML5 y sus APIs Javascript
 - `p5.js` ofrece un conjunto amplio de funciones y recursos muy simples de usar,
   adecuado para la enseñanza de la programación en diferentes niveles
 - Existe una gran comunidad educativa mundial que contribuye con aplicaciones de
   ejemplos, tutoriales y otros materiales
+- Las animaciones y simulaciones permiten integrar conocimientos de asignaturas
+  como como matemáticas, física, biología y arte
+- Las aplicaciones multimedia, interactivas y en red generalmente estimulan a los
+  estudiantes

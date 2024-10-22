@@ -29,3 +29,10 @@ comenzar a usar luego de
 
 Con un editor de programación (o cualquier editor de textos plano) puede hacer
 modificaciones y recargar en el navegador para ver los cambios.
+
+## Uso en el editor (IDE) vscode
+
+El editor libre [Visual Studio Code](https://code.visualstudio.com/) contiene
+*complementos* para trabajar con *p5.js*. El complemento `p5.vscode` permite
+instalar otros complementos que permiten crear proyectos y ejecutarlos lanzando un
+*servidor web* local y abre la aplicación directamente en el navegador web.
