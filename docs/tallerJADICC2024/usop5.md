@@ -23,7 +23,7 @@ En este caso debemos descargar el archivo Javascript `p5.js` o puede descargar
 la biblioteca completa que incluye `p5.sound.min.js` con funciones de manejo de
 sonido. Ver la sección [Descarga](https://p5js.org/es/download/).
 
-[Aquí](assets/p5.zip) les dejamos un sketch básico que pueden descargar un
+[Aquí](assets/p5.zip ':ignore') les dejamos un sketch básico que pueden descargar un
 comenzar a usar luego de
 
 1. Descomprimir el archivo
