@@ -27,7 +27,8 @@ sonido. Ver la sección [Descarga](https://p5js.org/es/download/).
 comenzar a usar luego de
 
 1. Descomprimir el archivo
-2. Abrir el archivo `index.html` en el navegador web.
+2. Abrir el archivo `index.html` en el navegador web (hacer doble click en el
+   archivo)
 
 Con un editor de programación (o cualquier editor de textos plano) puede hacer
 modificaciones y recargar en el navegador para ver los cambios.
